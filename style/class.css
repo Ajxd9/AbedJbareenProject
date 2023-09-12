@@ -9,3 +9,10 @@
     display: grid;
     gap: 15px;
 }
+
+.flexItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
