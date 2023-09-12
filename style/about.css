@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-align: center;
+
 }
 
 html {
@@ -16,6 +17,11 @@ html {
     flex-direction: column;
 }
 
+.aboutContainer * {
+    margin: 24px 0;
+
+}
+
 .aboutContainer .logo {
     width: 8.75em;
     height: 8.75em;
@@ -23,6 +29,7 @@ html {
 
 .aboutContainer h1 {
     font: normal normal 900 35px/52px Heebo;
+    margin-bottom: -11px;
 }
 
 .aboutContainer p {
@@ -30,21 +37,31 @@ html {
 }
 
 .aboutContainer a {
+    display: block;
     width: 16.25em;
     height: 2.563em;
 
     /* UI Properties */
-
     background: #1AE0EC 0% 0% no-repeat padding-box;
     border-radius: 25px;
+    font: normal normal bold 20px/30px Heebo;
+    color: #3A3A3A;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    line-height: 2.5;
     opacity: 1;
 }
 
 .aboutContainer {
     width: 100vw;
     height: 44.688em;
-    background: #ccc 0% 0% no-repeat padding-box;
+    background: #fff 0% 0% no-repeat padding-box;
     opacity: 1;
+    direction: rtl;
+}
+
+.aboutContainer .contentContainer {
+    width: 41%;
 }
 
 
@@ -110,7 +127,6 @@ input[type=submit] {
     cursor: pointer;
 }
 
-.fname {}
 
 /* Add a background color to the submit button on mouse-over */
 input[type=submit]:hover {
