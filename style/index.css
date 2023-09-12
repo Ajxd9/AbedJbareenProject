@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Style the header and navbar */
+header {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style the mobile menu */
+.mobile-menu {
+    display: none;
+    /* Hide the mobile menu by default */
+}
+
+.hamburger {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Style the navigation links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /* Display the navigation links by default on desktop */
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f00;
+    /* Change color on hover */
+}
+
+
+main {
+    width: 100%;
+    /* margin: 0 auto; */
+    max-width: calc(100% - 606px);
+    /* 606px is the total width of the space between the edges (303px on each side) */
+    padding: 0 303px;
+    /* Add padding to create the gap */
+    box-sizing: border-box;
+    /* Include padding in the width calculation */
+}
+
+.projectGallery {
+    margin-top: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* UI Properties */
+
+    background: #F6F6F6 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.projectGallery .projectGalleryItem {
+    height: 518px;
+    width: 405px;
+    /* UI Properties */
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #00000029;
+    border-radius: 10px;
+    opacity: 1;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+}
+
+.projectGallery .projectGalleryItem img.projectImage {
+    width: 100%;
+    height: 232.42px;
+    border-bottom: 1px solid #000;
+}
+
+.projectGallery .projectGalleryItem section h1 {
+    text-align: center;
+    font-family: Heebo;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 23px;
+    letter-spacing: 0px;
+    color: #3A3A3A;
+    opacity: 1;
+}
+
+.projectGallery .projectGalleryItem section p {
+    text-align: center;
+    font-family: Heebo;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #3A3A3A;
+    opacity: 1;
+    width: 352px;
+}
+
+.projectGallery .projectGalleryItem .iconContainer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 5px;
+}
+
+.projectGallery .projectGalleryItem .iconContainer img.smallIcons {
+    width: 26px;
+    height: 26px;
+}
+
+.projectGallery .projectGalleryItem .projectBtn {
+    width: 153px;
+    height: 40px;
+    background: #1AE0EC 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media query for displaying the mobile menu icon on smaller screens */
+@media screen and (max-width: 768px) {
+    .mobile-menu {
+        display: flex;
+        /* Show the mobile menu icon */
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide the navigation links on mobile by default */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        z-index: 99;
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Show the links when the menu is active */
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .hamburger.active .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Media query for hiding the mobile menu icon on screens larger than mobile */
+@media screen and (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+        /* Hide the mobile menu icon */
+    }
+}
