@@ -1,5 +1,5 @@
 $color_1: #333;
-$color_2: #f00;
+$color_2: rgb(13, 200, 224);
 $color_3: #3A3A3A;
 $font-family_1: Heebo;
 $background-color_1: #fff;
@@ -9,12 +9,13 @@ $background-color_2: #333;
 /* Style the mobile menu */
 /* Style the navigation links */
 /* Media query for displaying the mobile menu icon on smaller screens */
-/* Media query for hiding the mobile menu icon on screens larger than mobile */
+/* Media query for hiding the mobile menu icon on scr eens larger than mobile */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-align: center;
+
 }
 
 header {
@@ -24,58 +25,71 @@ header {
     width: 100vw;
     top: 0;
     z-index: 100;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.mobile-menu {
-    display: none;
-}
-
-.hamburger {
-    cursor: pointer;
-    padding: 5px;
-}
-
-.line {
-    width: 30px;
-    height: 3px;
-    background-color: $background-color_2;
-    margin: 4px 0;
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
 
 
-    li {
-        margin-right: 20px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
-    a {
-        text-decoration: none;
-        color: $color_1;
+    .logo {
+        font-size: 24px;
         font-weight: bold;
-        transition: color 0.3s;
+    }
 
-        &:hover {
-            color: $color_2;
+    .mobile-menu {
+        display: none;
+    }
 
+    .hamburger {
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: $background-color_2;
+        margin: 4px 0;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        display: flex;
+
+        height: 100%;
+
+        li {
+            margin-right: 20px;
+            display: block;
+            /* Ensure list items occupy the entire width */
+            transition: background-color 0.3s ease;
+            /* Add a smooth transition effect */
+            padding: 10px 5px;
+            border-right: 1px solid #ccc;
+
+            &:hover {
+                background-color: #ccc;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $color_1;
+            font-weight: bold;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $color_2;
+
+            }
         }
     }
 }

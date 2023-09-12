@@ -2,7 +2,7 @@
 /* Style the mobile menu */
 /* Style the navigation links */
 /* Media query for displaying the mobile menu icon on smaller screens */
-/* Media query for hiding the mobile menu icon on screens larger than mobile */
+/* Media query for hiding the mobile menu icon on scr eens larger than mobile */
 * {
   padding: 0;
   margin: 0;
@@ -18,8 +18,7 @@ header {
   top: 0;
   z-index: 100;
 }
-
-.container {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,45 +26,50 @@ header {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-.logo {
+header .logo {
   font-size: 24px;
   font-weight: bold;
 }
-
-.mobile-menu {
+header .mobile-menu {
   display: none;
 }
-
-.hamburger {
+header .hamburger {
   cursor: pointer;
   padding: 5px;
 }
-
-.line {
+header .line {
   width: 30px;
   height: 3px;
   background-color: #333;
   margin: 4px 0;
   transition: transform 0.3s, opacity 0.3s;
 }
-
-.nav-links {
+header .nav-links {
   list-style: none;
   padding: 0;
   display: flex;
+  height: 100%;
 }
-.nav-links li {
+header .nav-links li {
   margin-right: 20px;
+  display: block;
+  /* Ensure list items occupy the entire width */
+  transition: background-color 0.3s ease;
+  /* Add a smooth transition effect */
+  padding: 10px 5px;
+  border-right: 1px solid #ccc;
 }
-.nav-links a {
+header .nav-links li:hover {
+  background-color: #ccc;
+}
+header .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
   transition: color 0.3s;
 }
-.nav-links a:hover {
-  color: #f00;
+header .nav-links a:hover {
+  color: rgb(13, 200, 224);
 }
 
 main {
