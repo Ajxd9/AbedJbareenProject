@@ -8,8 +8,8 @@ This README file provides an overview of your portfolio project, which showcases
 
 The project is organized as follows:
 
-- `index.html`: The main landing page.
-- `page1.html`: Landing page 1.
+- `index.html`: The main landing page.✔️
+- `page1.html`: Landing page 1.✔️
 - `page2.html`: Landing page 2.
 - `page3.html`: Landing page 3.
 - `page4.html`: Landing page 4.
