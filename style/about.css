@@ -42,10 +42,10 @@ html {
     height: 2.563em;
 
     /* UI Properties */
-    background: #1AE0EC 0% 0% no-repeat padding-box;
+    background: rgb(26, 224, 236) 0% 0% no-repeat padding-box;
     border-radius: 25px;
     font: normal normal bold 20px/30px Heebo;
-    color: #3A3A3A;
+    color: rgb(58, 58, 58);
     letter-spacing: 0.3px;
     text-decoration: none;
     line-height: 2.5;

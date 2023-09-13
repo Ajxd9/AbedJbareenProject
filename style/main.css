@@ -1,3 +1,10 @@
+flexCenterDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Style the header and navbar */
 /* Style the mobile menu */
 /* Style the navigation links */
@@ -10,9 +17,13 @@
   text-align: center;
 }
 
+html {
+  font-size: 16px;
+}
+
 header {
   background-color: #fff;
-  color: #333;
+  color: rgb(0, 0, 0);
   position: fixed;
   width: 100vw;
   top: 0;
@@ -23,7 +34,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  max-width: 1200px;
+  max-width: 62.5vw;
   margin: 0 auto;
 }
 header .logo {
@@ -60,27 +71,26 @@ header .nav-links li {
   border-right: 1px solid #ccc;
 }
 header .nav-links li:hover {
-  background-color: #ccc;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 header .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   transition: color 0.3s;
 }
 header .nav-links a:hover {
-  color: rgb(13, 200, 224);
+  color: rgb(26, 224, 236);
 }
 
 main {
-  width: 100vw;
-  margin: 0 auto;
   margin-top: 50px;
+  direction: rtl;
 }
 main .upperContainer {
   height: 28.8125em;
   background-image: linear-gradient(to bottom, rgba(19, 232, 241, 0.3882352941), rgba(19, 232, 241, 0.3882352941)), url("../images/bgc.jpg");
-  background-size: 100%;
+  width: 100vw;
 }
 main .upperContainer .textContainer {
   width: 55%;
@@ -91,13 +101,61 @@ main .upperContainer .textContainer h1 {
 main .upperContainer .textContainer p {
   font: normal normal 500 20px/30px Heebo;
 }
+main .smallIconsContainer {
+  width: 100vw;
+  background: rgb(255, 255, 255) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  opacity: 1;
+}
+main .smallIconsContainer .smallIcons {
+  width: 6.25em;
+  height: 6.25em;
+}
+main .aboutContainer {
+  width: 100vw;
+  height: 44.688em;
+  background: #fff 0% 0% no-repeat padding-box;
+  opacity: 1;
+  direction: ltr;
+  margin-top: 5px;
+}
+main .aboutContainer * {
+  margin: 15px 0;
+}
+main .aboutContainer .logo {
+  width: 8.75em;
+  height: 8.75em;
+}
+main .aboutContainer h1 {
+  font: normal normal 900 35px/52px Heebo;
+  margin-bottom: -15px;
+}
+main .aboutContainer p {
+  font: normal normal normal 20px/29px Heebo;
+}
+main .aboutContainer a {
+  display: block;
+  width: 16.25em;
+  height: 2.563em;
+  background: rgb(26, 224, 236) 0% 0% no-repeat padding-box;
+  border-radius: 25px;
+  font: normal normal bold 20px/30px Heebo;
+  color: rgb(58, 58, 58);
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  line-height: 2.5;
+  opacity: 1;
+}
+main .aboutContainer .contentContainer {
+  width: 41%;
+}
 main .projectGallery {
-  max-width: calc(100% - 606px);
-  margin: 50px auto;
+  max-width: calc(100vw - 606px);
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   background: #F6F6F6 0% 0% no-repeat padding-box;
   opacity: 1;
+  margin: 0 auto;
 }
 main .projectGallery .projectGalleryItem {
   height: 32.375em;
@@ -110,31 +168,19 @@ main .projectGallery .projectGalleryItem {
   grid-template-rows: repeat(5, 1fr);
   justify-items: center;
 }
-main .projectGallery .projectGalleryItem img.projectImage {
+main .projectGallery .projectGalleryItem .projectImage {
   width: 100%;
   height: 14.52625em;
   border-bottom: 1px solid #000;
 }
 main .projectGallery .projectGalleryItem section h1 {
-  font-family: Heebo;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 500;
-  line-height: 1.5;
-  font-size: 1.4375em;
-  letter-spacing: 0px;
-  color: #3A3A3A;
+  font: normal normal 500 23px/34px Heebo;
+  color: rgb(58, 58, 58);
   opacity: 1;
 }
 main .projectGallery .projectGalleryItem section p {
-  font-family: Heebo;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 500;
-  line-height: 1.5;
-  font-size: 1em;
-  letter-spacing: 0px;
-  color: #3A3A3A;
+  font: normal normal 500 14px/26px Heebo;
+  color: rgb(58, 58, 58);
   opacity: 1;
   width: 22em;
 }
@@ -148,12 +194,51 @@ main .projectGallery .projectGalleryItem .iconContainer img.smallIcons {
   height: 1.625em;
 }
 main .projectGallery .projectGalleryItem .projectBtn {
-  width: 9.5625em;
+  display: block;
+  width: 9.562em;
   height: 2.5em;
-  background: #1AE0EC 0% 0% no-repeat padding-box;
-  border: none;
-  border-radius: 15px;
+  background: rgb(26, 224, 236) 0% 0% no-repeat padding-box;
+  border-radius: 25px;
+  font: normal normal 500 14px/26px Heebo;
+  color: rgb(44, 44, 44);
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  line-height: 2.5;
   opacity: 1;
+}
+
+body {
+  position: relative;
+  padding-bottom: 150px;
+}
+
+footer {
+  background-color: rgb(0, 0, 0);
+  height: 5vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer .container {
+  display: flex;
+}
+footer .container .copyRight {
+  color: rgb(26, 224, 236);
+  font: normal normal 300 20px/29px Heebo;
+  display: flex;
+  width: 98%;
+  line-height: 2.2;
+  margin: 0 auto;
+}
+footer .container .copyRight .right {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+footer .container .copyRight .left {
+  float: left;
+  width: 50%;
+  text-align: left;
 }
 
 @media screen and (max-width: 768px) {

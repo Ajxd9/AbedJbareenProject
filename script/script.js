@@ -1,70 +1,88 @@
 // JavaScript to toggle the mobile menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
+var projectImages = ["images/landingPage1.jpg", "images/landingPage2.jpg", "images/landingPage3.jpg", "images/landingPage4.png", "images/landingPage5.png", "images/landingPage6.png"];
+var allTechnologies = ["./images/HTML-icon.png", "./images/CSS-icon.png", "./images/Bootstrap-icon.png", "./images/SASS-icon.png", "./images/HTML-icon.png", "./images/CSS-icon.png", "./images/Bootstrap-icon.png", "./images/SASS-icon.png", "./images/HTML-icon.png", "./images/CSS-icon.png", "./images/Bootstrap-icon.png"];
+
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
 });
 
-var projectImages = ["images/landingPage1.jpg", "images/landingPage2.jpg", "images/landingPage3.jpg", "images/landingPage4.png", "images/landingPage5.png", "images/landingPage6.png"];
+//Create Icons to be added to a div
+function createSmallIconList(iconList, small) {
+    var listLength;
+    if (small == 1)
+        listLength = 4;
+    else
+        listLength = iconList.length;
+    var iconContainer = document.createElement("div");
+    iconContainer.className = "iconContainer";
+
+
+    for (var i = 0; i < listLength; i++) {
+        var icon = document.createElement("img");
+        icon.src = iconList[i];
+        icon.alt = iconList[i];
+        icon.className = "smallIcons";
+        iconContainer.appendChild(icon);
+    }
+    return iconContainer;
+}
+
+
+
 // Function to generate the provided HTML structure
-function createProjectGalleryItem(imageindex) {
+function createProjectGalleryItem(imageIndex) {
+    if (imageIndex == null)
+        return;
     var projectGalleryItem = document.createElement("div");
     projectGalleryItem.className = "projectGalleryItem grid";
 
     var image = document.createElement("img");
     image.className = "projectImage";
-    image.src = projectImages[imageindex];
-    image.alt = projectImages[imageindex];
+    image.src = projectImages[imageIndex];
+    image.alt = projectImages[imageIndex];
 
     var section = document.createElement("section");
     var h1 = document.createElement("h1");
-    h1.textContent = "Landing Page";
+    h1.textContent = "שם הפרויקט";
     var p = document.createElement("p");
-    p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia expedita quis velit ipsa a aspernatur harum reiciendis voluptatibus at.";
-
-    var iconContainer = document.createElement("div");
-    iconContainer.className = "iconContainer grid";
-
-    var smallIcons = ["images/HTML-icon.png", "images/CSS-icon.png", "images/Bootstrap-icon.png", "images/SASS-icon.png"];
-    for (var i = 0; i < smallIcons.length; i++) {
-        var icon = document.createElement("img");
-        icon.src = smallIcons[i];
-        icon.alt = "";
-        icon.className = "smallIcons";
-        iconContainer.appendChild(icon);
-    }
-
-    var button = document.createElement("button");
+    p.textContent = "לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכה,";
+    var button = document.createElement("a");
     button.className = "projectBtn";
-    button.textContent = "Project Page";
-    // Create an img element for the SVG icon
-    var svgIcon = document.createElement("img");
-    svgIcon.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMWVtIj4KICA8cGF0aCBkPSJNMjA5LjYgMjc4LjZjMTIuNS0xMi41IDEyLjUtMzIuOCAwLTQ1LjMgMC0xMi41IDI5OC4yLTMxLjggMTIuNS0xMi41IDMyLjggMTIuNSA0NS4zIDAgMTIuNSAzMi44IDEyLjUgNDUuMyAwIDEyLjUtIDI5OC4yIDMxLjggMTIuNSAxMi41IDMyLjggMCAzMjguOCAxMi41IDQ1LjMgMCAxMi41IDMyLjggMTIuNSAzMi44IDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41LTM1LjIgMTYwLTE2MC4zIDcyLjYgMTYwLjUgMzIuOCAwLTEyLjUtMzIuOC0zMi44IDAtMzIuOCAxMi41LTMyLjggMzIuOCAwIDAgMzIuOC0zMi44IDMyLjgtMzIuOCAwIDEyLjUtMzIuOCAzMjguOCAwIDMyLjggMTIuNSA0NS4zIDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41IDMyLjggMTIuNSAzMi44IDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41LTM1LjIgMTYwLTE2MC4zIDcyLjYgMTYwLjUgMzIuOCAwLTEyLjUtMzIuOC0zMi44IDAtMzIuOCAxMi41LTMyLjggMzIuOCAwIDEyLjUtMzIuOCAzMjguOCAwIDMyLjggMTIuNSA0NS4zIDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41IDMyLjggMTIuNSAzMi44IDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41LTM1LjIgMTYwLTE2MC4zIDcyLjYgMTYwLjUgMzIuOCAwLTEyLjUtMzIuOC0zMi44IDAtMzIuOCAxMi41LTMyLjggMzIuOCAwIDEyLjUtMzIuOCAzMjguOCAwIDMyLjggMTIuNSA0NS4zIDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41IDMyLjggMTIuNSAzMi44IDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41LTM1LjIgMTYwLTE2MC4zIDcyLjYgMTYwLjUgMzIuOCAwLTEyLjUtMzIuOC0zMi44IDAtMzIuOCAxMi41LTMyLjggMzIuOCAwIDEyLjUtMzIuOCAzMjguOCAwIDMyLjggMTIuNSA0NS4zIDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41IDMyLjggMTIuNSAzMi44IDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41LTM1LjIgMTYwLTE2MC4zIDcyLjYgMTYwLjUgMzIuOCAwLTEyLjUtMzIuOC0zMi44IDAtMzIuOCAxMi41LTMyLjggMzIuOCAwIDEyLjUtMzIuOCAzMjguOCAwIDMyLjggMTIuNSA0NS4zIDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41IDMyLjggMTIuNSAzMi44IDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41LTM1LjIgMTYwLTE2MC4zIDcyLjYgMTYwLjUgMzIuOCAwLTEyLjUtMzIuOC0zMi44IDAtMzIuOCAxMi41LTMyLjggMzIuOCAwIDEyLjUtMzIuOCAzMjguOCAwIDMyLjggMTIuNSA0NS4zIDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41IDMyLjggMTIuNSAzMi44IDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41LTM1LjIgMTYwLTE2MC4zIDcyLjYgMTYwLjUgMzIuOCAwLTEyLjUtMzIuOC0zMi44IDAtMzIuOCAxMi41LTMyLjggMzIuOCAwIDEyLjUtMzIuOCAzMjguOCAwIDMyLjggMTIuNSA0NS4zIDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41IDMyLjggMTIuNSAzMi44IDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41LTM1LjIgMTYwLTE2MC4zIDcyLjYgMTYwLjUgMzIuOCAwLTEyLjUtMzIuOC0zMi44IDAtMzIuOCAxMi41LTMyLjggMzIuOCAwIDEyLjUtMzIuOCAzMjguOCAwIDMyLjggMTIuNSA0NS4zIDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41IDMyLjggMTIuNSAzMi44IDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41LTM1LjIgMTYwLTE2MC4zIDcyLjYgMTYwLjUgMzIuOCAwLTEyLjUtMzIuOC0zMi44IDAtMzIuOCAxMi41LTMyLjggMzIuOCAwIDEyLjUtMzIuOCAzMjguOCAwIDMyLjggMTIuNSA0NS4zIDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41IDMyLjggMTIuNSAzMi44IDAgMTIuNSAzMi44IDQ1LjMgMCAxMi41LTM1LjIgMTYwLTE2MC4zIDcyLjYgMTY0LjYgMjc4LjYgMTYwLjEgMC0zMi44LTEyLjUtMzIuOC0zMi44czMyLjgtMTIuNSAzMi44LTMzLjggMTIuNS0zMi44LTMzLjggMCAwLTMzLjgtMTIuNS0zMy44LTMzLjh6Ij4KPC9zdmc+Cg==";
-    svgIcon.alt = "";
-    svgIcon.className = "svgIcon";
-    button.appendChild(svgIcon);
+    button.textContent = "לעמוד הפרויקט" + ">> ";
+    button.href = "./projectsPage.html?projectNum=" + imageIndex;
 
     section.appendChild(h1);
     section.appendChild(p);
 
     projectGalleryItem.appendChild(image);
     projectGalleryItem.appendChild(section);
-    projectGalleryItem.appendChild(iconContainer);
+    projectGalleryItem.appendChild(createSmallIconList(allTechnologies, 1, 1));
     projectGalleryItem.appendChild(button);
 
     return projectGalleryItem;
 }
 
+
+
+
+
+
+//add the technologies to the content div on the main page
+let content = document.getElementById('content');
+if (content != null)
+    content.appendChild(createSmallIconList(allTechnologies, 0));
 // Number of times to create the HTML structure
 var n = 6; // Change this to the desired number
 
 // Get a reference to the container where the HTML will be appended
 var container = document.getElementById("projectGal");
-
-// Create the HTML structure n times and append it to the container
-for (var i = 0; i < n; i++) {
-    var projectItem = createProjectGalleryItem(i);
-    container.appendChild(projectItem);
-}
+if (container != null)
+    // Create the HTML structure n times and append it to the container
+    for (var i = 0; i < n; i++) {
+        var projectItem = createProjectGalleryItem(i);
+        container.appendChild(projectItem);
+    }
