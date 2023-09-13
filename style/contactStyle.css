@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    text-align: center;
+}
+
+body {
+    position: relative;
+    padding-bottom: 150px;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container .contact {
+    width: 100%;
+    height: 88vh;
+    background: #3A3A3A 0% 0% no-repeat padding-box;
+    color: wheat;
+    display: flex;
+}
+
+footer .container .contact .imageContainer {
+    width: 70vw;
+
+
+}
+
+footer .container .contact form {
+    width: 30vw;
+    margin: 100px 304px 0 0;
+}
+
+footer .container .contact form .formControl {
+    margin-bottom: 17px;
+    text-align: right;
+}
+
+footer .container .contact form .formControl input {
+    width: 550px;
+    height: 50px;
+    text-align: right;
+    font: normal normal bold 18px/24px Heebo;
+}
+
+footer .container .contact form .formControl input[id="message"] {
+    width: 550px;
+    height: 100px;
+}
+
+footer .container .contact form .formControl label {
+    text-align: right;
+    font: normal normal bold 16px/24px Heebo;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+footer .container .contact form h1 {
+    text-align: right;
+    font: normal normal 900 36px/53px Heebo;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+footer .container .contact form .btn {
+    display: block;
+    width: 166px;
+    height: 50px;
+    background: #1AE0EC 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    font: normal normal bold 22px/30px Heebo;
+    color: #2C2C2C;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    line-height: 2.3;
+    opacity: 1;
+}
+
+footer .container .contact form p {
+    text-align: right;
+    font: normal normal normal 20px/29px Heebo;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-bottom: 47px;
+}
+
+footer .container .socialMedia {
+    height: 200px;
+    width: 100%;
+    background: #1AE0EC 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+footer .container .socialMedia .iconContainer {
+    width: 63.5%;
+    height: 100%;
+    display: inline-grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .container .socialMedia .iconContainer .containerItem img {
+    margin-bottom: 15px;
+}
+
+footer .container .socialMedia .iconContainer .containerItem h5 {
+    text-align: center;
+    font: normal normal normal 14px/16px Heebo;
+    letter-spacing: 0px;
+    color: #2C2C2C;
+    opacity: 1;
+}
+
+footer .container .copyRight {
+    height: 5vh;
+    color: rgb(26, 224, 236);
+    font: normal normal 300 20px/29px Heebo;
+    display: flex;
+    width: 98%;
+    line-height: 2.2;
+    margin: 0 auto;
+
+}
+
+footer .container .copyRight .right {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+footer .container .copyRight .left {
+    float: left;
+    width: 50%;
+    text-align: left;
+}

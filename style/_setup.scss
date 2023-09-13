@@ -12,6 +12,7 @@ $font_1: normal normal bold 20px/30px Heebo;
 $font_2: normal normal 500 14px/26px Heebo;
 $font_3: normal normal 500 23px/34px Heebo;
 $font_4: normal normal 300 20px/29px Heebo;
+$font_5: normal normal bold 22px/30px Heebo;
 
 @mixin btn($btnWidth, $btnHeight, $btnColor, $btnfont, $textColor) {
     display: block;
