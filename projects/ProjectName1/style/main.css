@@ -91,6 +91,7 @@
   }
   .image .container form h1 {
     font: normal normal 900 25px/30px Heebo;
+    margin-bottom: 1em;
   }
   .image .container form p {
     font: normal normal normal 15px/22px Heebo;
