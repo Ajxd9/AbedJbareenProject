@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&family=Varela+Round&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    form {
+        width: 57vw;
+        height: 38vh;
+
+        .formItems {
+
+            direction: rtl;
+            display: flex;
+            margin-top: 3.7vh;
+
+            .formControl {
+                display: flex;
+                flex-direction: column;
+                margin-right: 2vw;
+                justify-content: flex-end;
+
+
+                input {
+                    width: 21.77vw;
+                    height: 4.62vh;
+                    background: #F6F6F624 0% 0% no-repeat padding-box;
+                    border: 2px solid #FFFFFF;
+                    opacity: 1;
+                }
+
+                label {
+                    text-align: right;
+                    font: normal normal normal 16px/20px Varela Round;
+                    letter-spacing: 0px;
+                    color: #F9F9F9;
+                    opacity: 1;
+                }
+            }
+
+            .btn {
+                display: block;
+                width: 11vw;
+                height: 4.62vh;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                opacity: 1;
+                font: normal normal normal 16px/2.5 Varela Round;
+                letter-spacing: 0px;
+                color: #1C1C1C;
+                opacity: 1;
+            }
+        }
+
+        h1 {
+
+            font: normal normal normal 160px/231px Satisfy;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            text-shadow: 0px 0px 36px #00000087;
+            opacity: 1;
+        }
+
+        h5 {
+
+            font: normal normal normal 32px/38px Varela Round;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+            margin-bottom: 2vh;
+        }
+
+        p {
+            font: normal normal normal 16px/20px Varela Round;
+            letter-spacing: 0px;
+            color: #F9F9F9;
+            opacity: 1;
+
+        }
+    }
+}

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&family=Varela+Round&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 16px;
+}
+
+header {
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.04167vw 2.08333vw;
+    /* Use 'vw' units */
+    max-width: 80rem;
+    /* Use 'rem' units */
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 3.64583vh;
+    /* Use 'vh' units */
+    width: 3.64583vh;
+    /* Use 'vh' units */
+    object-fit: contain;
+}
+
+header .logo {}
+
+header .logo a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    /* Use 'rem' units */
+    font-weight: bold;
+    margin-left: 0.625rem;
+    /* Use 'rem' units */
+    color: black;
+    font-family: 'Satisfy', cursive;
+}
+
+header .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    /* Display the hamburger container */
+}
+
+header .hamburger {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* Center-align the lines vertically */
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+header .line {
+    height: 3px;
+    /* Adjusted height for the lines */
+    width: 20px;
+    /* Adjusted width for the lines */
+    background-color: #333;
+    margin: 4px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+header .nav-links {
+
+    list-style: none;
+    padding: 0;
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    /* Display the navigation links vertically */
+    position: absolute;
+    /* Position the navigation links absolutely */
+    top: 100%;
+    /* Place them below the header */
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0px 0px 0.52083vw rgba(0, 0, 0, 0.2);
+    /* Use 'vw' units */
+    z-index: 99;
+}
+
+header .nav-links li {
+    margin-right: 0;
+    margin-bottom: 0.52083vh;
+    /* Use 'vh' units */
+    width: 100%;
+    border: 0.52083vw solid #ccc;
+    /* Use 'vw' units */
+    padding: 1.04167vh 0.52083vw;
+    /* Use 'vh' and 'vw' units */
+}
+
+header .nav-links li:hover {
+    background-color: rgba(26, 224, 236, 1);
+    color: black;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    header .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        margin-top: calc(6.25vh + 1.04167vw);
+        /* Adjusted to use 'vh' and 'vw' units */
+    }
+
+    header .logo a {
+        font-size: 1.35417rem;
+        /* Use 'rem' units */
+    }
+
+    header .hamburger.active .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-3px, 4px);
+    }
+
+    header .hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    header .hamburger.active .line:nth-child(3) {
+        transform: rotate(45deg) translate(-3px, -4px);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    header .mobile-menu {
+        display: none;
+    }
+
+    header .nav-links {
+        display: flex;
+        flex-direction: row;
+        /* Display the navigation links horizontally */
+        position: static;
+        /* Remove absolute positioning */
+        top: auto;
+        /* Reset top value */
+        background-color: transparent;
+        /* Remove background color */
+        box-shadow: none;
+        /* Remove box-shadow */
+        width: auto;
+        /* Reset width */
+    }
+
+    header .nav-links li {
+        border: none;
+        /* Remove border */
+        padding: 0;
+        /* Reset padding */
+        margin-right: 2.08333vw;
+        /* Use 'vw' units */
+        margin-bottom: 0;
+        /* Reset margin-bottom */
+    }
+
+    header .nav-links li:hover {
+        background-color: transparent;
+        /* Remove background color on hover */
+        color: black;
+    }
+}

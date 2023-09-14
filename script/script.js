@@ -5,6 +5,14 @@ var projectImages = ["images/landingPage1.jpg", "images/landingPage2.jpg", "imag
 var allTechnologies = ["./images/HTML-icon.png", "./images/CSS-icon.png", "./images/Bootstrap-icon.png", "./images/SASS-icon.png", "./images/HTML-icon.png", "./images/CSS-icon.png", "./images/Bootstrap-icon.png", "./images/SASS-icon.png", "./images/HTML-icon.png", "./images/CSS-icon.png", "./images/Bootstrap-icon.png"];
 
 
+
+
+
+
+
+
+
+
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
