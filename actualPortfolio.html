@@ -1,28 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/class.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Document</title>
+        body,
+        html {
+            height: 100vh;
+        }
+
+        .parallax {
+            /* The image used */
+
+            /* Full height */
+            height: 100vh;
+            width: 100vw;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-    </header>
-    <main>
-    </main>
-    <footer>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
+<body id="body">
+
+    <!-- <div class="parallax">test1</div>
+
+    <div class="parallax2">test2
+    </div>
+
+    <div class="parallax3">test3</div> -->
+    <div class="divParallaxChild flexItem" id="divParallaxChild0">
+        <h1>תיק עבודות</h1>
+        <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכה, בתחום הדפוס,
+            ההדפסה
+            והפרסום. למשל:
+            לורםלורם איפסום או בקיצור לי.</p>
+    </div>
+    <div class="divParallaxChild flexItem" id="divParallaxChild1">
+        <h1>תיק עבודות</h1>
+        <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכה, בתחום הדפוס,
+            ההדפסה
+            והפרסום. למשל:
+            לורםלורם איפסום או בקיצור לי.</p>
+    </div>
+    <div class="divParallaxChild flexItem" id="divParallaxChild2">
+        <h1>תיק עבודות</h1>
+        <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכה, בתחום הדפוס,
+            ההדפסה
+            והפרסום. למשל:
+            לורםלורם איפסום או בקיצור לי.</p>
+    </div>
+    <div class="divParallaxChild flexItem" id="divParallaxChild3">
+        <h1>תיק עבודות</h1>
+        <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכה, בתחום הדפוס,
+            ההדפסה
+            והפרסום. למשל:
+            לורםלורם איפסום או בקיצור לי.</p>
+    </div>
+    <div class="divParallaxChild flexItem" id="divParallaxChild4">
+        <h1>תיק עבודות</h1>
+        <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכה, בתחום הדפוס,
+            ההדפסה
+            והפרסום. למשל:
+            לורםלורם איפסום או בקיצור לי.</p>
+    </div>
+    <div class="divParallaxChild flexItem" id="divParallaxChild5">
+        <h1>תיק עבודות</h1>
+        <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכה, בתחום הדפוס,
+            ההדפסה
+            והפרסום. למשל:
+            לורםלורם איפסום או בקיצור לי.</p>
+    </div>
+    <script src="script/parallaxCreator.js"></script>
+    <script>
+        let imageParallax = ["images/landingPage1.jpg", "images/landingPage2.jpg", "images/landingPage3.jpg", "images/landingPage4.png", "images/landingPage5.png", "images/landingPage6.png"];
+        for (var i = 0; i < imageParallax.length; i++) {
+            var parDiv = createParallaxDiv(imageParallax[i]);
+            var body = document.getElementById("body");
+            var parChild = document.getElementById("divParallaxChild" + i);
+            parDiv.appendChild(parChild);
+            body.appendChild(parDiv);
+
+        }
+    </script>
 </body>
 
 </html>
