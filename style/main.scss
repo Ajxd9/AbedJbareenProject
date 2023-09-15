@@ -434,7 +434,7 @@ footer {
                 height: 100%;
                 display: inline-grid;
                 grid-template-columns: repeat(6, 1fr);
-                justify-content: space-evenly;
+                justify-items: space-evenly;
                 align-items: center;
 
                 .containerItem {
