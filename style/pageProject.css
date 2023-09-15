@@ -1,18 +1,1 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&family=Varela+Round&display=swap");
-flexCenterDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.projectSSContainer {
-  width: 100vw;
-  height: 93vh;
-}
-.projectSSContainer .projectScreenS {
-  /* margin-top: 7.1875em;
-  margin-bottom: 11.5em; */
-  width: 60vw;
-  height: 40em;
-}/*# sourceMappingURL=pageProject.css.map */
+@import"https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&family=Varela+Round&display=swap";flexCenterDiv{display:flex;justify-content:center;align-items:center;flex-direction:column}.projectSSContainer{width:100vw;height:93vh}.projectSSContainer .projectScreenS{width:60vw;height:40em}/*# sourceMappingURL=pageProject.css.map */
