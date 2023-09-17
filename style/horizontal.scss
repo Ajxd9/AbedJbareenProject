@@ -12,7 +12,17 @@ div {
     overflow-x: scroll;
 }
 
-p {
+.innerDiv {
     width: 1000vw;
-    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(10, 5fr);
+    gap: 15px;
+    overflow: hidden;
+}
+
+.innerInnerDiv {
+    width: 100vw;
+    background-color: red;
+    border: 10px solid #000;
+    overflow: hidden;
 }
