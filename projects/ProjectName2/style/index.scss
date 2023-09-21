@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+html {
+    font-size: 16px;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -19,14 +23,21 @@
 
 
     form {
-        width: 57vw;
+        width: 100vw;
         height: 38vh;
+
 
         .formItems {
 
             direction: rtl;
             display: flex;
             margin-top: 3.7vh;
+            justify-content: center;
+
+            @media screen and (max-width:1024px) {
+                margin: unset;
+                justify-content: center;
+            }
 
             .formControl {
                 display: flex;
@@ -34,21 +45,34 @@
                 margin-right: 2vw;
                 justify-content: flex-end;
 
+                @media screen and (max-width:1024px) {
+                    justify-content: center;
+                }
 
                 input {
                     width: 21.77vw;
                     height: 4.62vh;
                     background: #F6F6F624 0% 0% no-repeat padding-box;
-                    border: 2px solid #FFFFFF;
+                    border: 0.125em solid #FFFFFF;
                     opacity: 1;
+
+                    @media screen and (max-width:1024px) {
+                        width: 81.351351351vw;
+                        height: 5.479452054vh;
+                    }
                 }
 
                 label {
                     text-align: right;
-                    font: normal normal normal 16px/20px Varela Round;
+                    font: normal normal normal 1em/1.25em Varela Round;
                     letter-spacing: 0px;
                     color: #F9F9F9;
                     opacity: 1;
+
+                    @media screen and (max-width:1024px) {
+                        font: normal normal normal 0.6875em/0.8125em Varela Round;
+                    }
+
                 }
             }
 
@@ -58,38 +82,68 @@
                 height: 4.62vh;
                 background: #FFFFFF 0% 0% no-repeat padding-box;
                 opacity: 1;
-                font: normal normal normal 16px/2.5 Varela Round;
+                font: normal normal normal 1em/2.5 Varela Round;
                 letter-spacing: 0px;
                 color: #1C1C1C;
                 opacity: 1;
                 text-decoration: none;
+
+                @media screen and (max-width:1024px) {
+                    font: normal normal normal 0.6875em/0.8125em Varela Round;
+                    width: 81.351351351vw;
+                    height: 5.479452054vh;
+                    margin-top: 2vh;
+                    line-height: 3;
+                }
+            }
+
+            @media screen and (max-width:1024px) {
+                flex-direction: column;
             }
         }
 
         h1 {
 
-            font: normal normal normal 160px/231px Satisfy;
+            font: normal normal normal 10em/14.4375rem Satisfy;
             letter-spacing: 0px;
             color: #FFFFFF;
-            text-shadow: 0px 0px 36px #00000087;
+            text-shadow: 0px 0px 2.25em #00000087;
             opacity: 1;
+
+            @media screen and (max-width:1024px) {
+                font: normal normal normal 3.75em/5rem Satisfy;
+            }
         }
 
         h5 {
 
-            font: normal normal normal 32px/38px Varela Round;
+            font: normal normal normal 2em/2.375rem Varela Round;
             letter-spacing: 0px;
             color: #FFFFFF;
             opacity: 1;
             margin-bottom: 2vh;
+
+            @media screen and (max-width:1024px) {
+                font: normal normal normal 1.125em/1.375rem Varela Round;
+            }
+
         }
 
         p {
-            font: normal normal normal 16px/20px Varela Round;
+            font: normal normal normal 1em/1.25rem Varela Round;
             letter-spacing: 0px;
             color: #F9F9F9;
             opacity: 1;
+        }
 
+        @media screen and (max-width:1024px) {
+            font: normal normal normal 1em/1.25rem Varela Round;
+            width: 88.378378378vw;
+            height: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
     }
 }
