@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    direction: rtl;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+
+    .background-container {
+        width: 100%;
+        height: 68.796296296%;
+        background: transparent url('../images/Path15.png') 0% 0% no-repeat padding-box;
+        background-position-x: center;
+        background-position-y: center;
+        display: flex;
+        background-size: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font: normal normal bold 86px/113px Assistant;
+            letter-spacing: 0px;
+            color: #D3E10E;
+            opacity: 1;
+            margin-bottom: 23px;
+        }
+
+        p {
+            text-align: center;
+            font: normal normal normal 20px/26px Assistant;
+            letter-spacing: 0px;
+            color: #F9F9F9;
+            opacity: 1;
+        }
+    }
+
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 31.2037%;
+        width: 100%;
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .form-control {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                margin-right: 37px;
+
+                label {
+                    text-align: right;
+                    font: normal normal bold 16px/21px Assistant;
+                    letter-spacing: 0px;
+                    color: #011560;
+                    opacity: 1;
+                }
+
+                input[type=text] {
+                    width: 418px;
+                    height: 50px;
+                    background: #F6F6F6 0% 0% no-repeat padding-box;
+                    border-bottom: 4px solid #D3E10E;
+                    opacity: 1;
+                }
+
+                input[type=submit] {
+                    width: 166px;
+                    height: 50px;
+                    background: #D3E10E 0% 0% no-repeat padding-box;
+                    text-align: center;
+                    font: normal normal bold 22px/30px Assistant;
+                    letter-spacing: 0.33px;
+                    color: #011560;
+                    opacity: 1;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .contianer {
+        .background {}
+
+
+        .form-container {
+            .form-control {
+                input[type=text] {}
+
+                input[type=submit] {}
+            }
+        }
+    }
+}
