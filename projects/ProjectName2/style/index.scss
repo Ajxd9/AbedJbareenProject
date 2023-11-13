@@ -89,16 +89,18 @@ html {
                 text-decoration: none;
 
                 @media screen and (max-width:1024px) {
-                    font: normal normal normal 0.6875em/0.8125em Varela Round;
+
                     width: 81.351351351vw;
                     height: 5.479452054vh;
-                    margin-top: 2vh;
-                    line-height: 3;
+                    font: normal normal normal 1em/2.5rem Varela Round;
+                    color: #2823FD;
+
                 }
             }
 
             @media screen and (max-width:1024px) {
                 flex-direction: column;
+
             }
         }
 

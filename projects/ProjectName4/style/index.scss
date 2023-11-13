@@ -28,16 +28,16 @@ html {
         align-items: center;
 
         h1 {
-            font: normal normal bold 86px/113px Assistant;
+            font: normal normal bold 5.375em/113px Assistant;
             letter-spacing: 0px;
             color: #D3E10E;
             opacity: 1;
-            margin-bottom: 23px;
+            margin-bottom: 2.129629629vh;
         }
 
         p {
             text-align: center;
-            font: normal normal normal 20px/26px Assistant;
+            font: normal normal normal 1.25em/26px Assistant;
             letter-spacing: 0px;
             color: #F9F9F9;
             opacity: 1;
@@ -61,33 +61,32 @@ html {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                margin-right: 37px;
+                margin-right: 1.927083333vw;
 
                 label {
                     text-align: right;
-                    font: normal normal bold 16px/21px Assistant;
+                    font: normal normal bold 1em/21px Assistant;
                     letter-spacing: 0px;
                     color: #011560;
                     opacity: 1;
                 }
 
                 input[type=text] {
-                    width: 418px;
-                    height: 50px;
+                    width: 21.770833333vw;
+                    height: 4.629629629vh;
                     background: #F6F6F6 0% 0% no-repeat padding-box;
-                    border-bottom: 4px solid #D3E10E;
+                    border-bottom: 0.25em solid #D3E10E;
                     opacity: 1;
                 }
 
                 input[type=submit] {
-                    width: 166px;
-                    height: 50px;
+                    width: 8.645833333vw;
+                    height: 4.629629629vh;
                     background: #D3E10E 0% 0% no-repeat padding-box;
                     text-align: center;
-                    font: normal normal bold 22px/30px Assistant;
+                    font: normal normal bold 1.375em/2em Assistant;
                     letter-spacing: 0.33px;
                     color: #011560;
-                    opacity: 1;
                     opacity: 1;
                 }
             }
@@ -96,16 +95,51 @@ html {
 }
 
 @media screen and (max-width:1024px) {
-    .contianer {
-        .background {}
+    .container {
+        .background-container {
+            height: 45.662100456vh;
+            background-size: cover;
 
+            h1 {
+                font: normal normal bold 30px/22px Heebo;
+            }
 
-        .form-container {
-            .form-control {
-                input[type=text] {}
-
-                input[type=submit] {}
+            p {
+                font: normal normal normal 16px/20px Heebo;
+                color: #F9F9F9;
+                padding: 0 30px 0 30px;
             }
         }
+
+        .form-container {
+            height: 54.337899543vh;
+
+            form {
+
+                flex-direction: column;
+
+                .form-control {
+                    margin-bottom: 1.927083333vh;
+
+                    label {
+                        text-align: right;
+                        font: normal normal bold 0.625em/14px Heebo;
+                        letter-spacing: 0px;
+                        color: #011560;
+                    }
+
+                    input[type=text],
+                    input[type=submit] {
+                        width: 77.297297297vw;
+                        height: 5.175038051vh;
+                    }
+
+                    input[type=submit] {
+                        font: normal normal bold 0.875em/19px Heebo;
+                    }
+                }
+            }
+        }
+
     }
 }
