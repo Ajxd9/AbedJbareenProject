@@ -1,6 +1,22 @@
 @import 'setup';
 
+.buttonsList {
+    display: flex;
+    padding-top: 2vh;
 
+    .btnProject {
+        display: block;
+        width: 7.96875vw;
+        height: 2.777777777vh;
+        background-color: #1AE0EC;
+        margin: 2em;
+        font: normal normal 500 0.875em/26px Heebo;
+        letter-spacing: 0px;
+        color: #2C2C2C;
+        border-radius: 0.925em;
+        text-decoration: none;
+    }
+}
 
 .projectSSContainer {
     width: 100vw;
